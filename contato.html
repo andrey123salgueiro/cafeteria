@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback & Contato - Cantinho do Café</title>
+    <style>
+        /* Estilos CSS - Cores da Cafeteria */
+        :root {
+            --cor-cafe-escuro: #4A2C2A; 
+            --cor-bege-claro: #F5E5C9;
+            --cor-caramelo: #C89558;
+            --cor-fundo: #FAFAEE; 
+            --cor-texto: #333333;
+            --cor-preco: #D2691E;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--cor-fundo);
+            color: var(--cor-texto);
+        }
+
+        header {
+            background-color: var(--cor-cafe-escuro);
+            color: white;
+            padding: 25px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+            font-size: 3em;
+            letter-spacing: 2px;
+        }
+
+        nav {
+            margin-top: 15px;
+        }
+
+        nav a {
+            color: var(--cor-bege-claro);
+            text-decoration: none;
+            margin: 0 15px; /* Ajuste o espaçamento */
+            font-weight: bold;
+            font-size: 1.1em;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--cor-caramelo);
+        }
+
+        .container {
+            width: 90%;
+            max-width: 700px;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: white;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        .container h2 {
+            color: var(--cor-cafe-escuro);
+            border-bottom: 3px solid var(--cor-caramelo);
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        /* Estilos do Formulário */
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: var(--cor-cafe-escuro);
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid var(--cor-bege-claro);
+            border-radius: 5px;
+            box-sizing: border-box; 
+            background-color: #fcfcfc;
+            font-size: 1em;
+            color: var(--cor-texto);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+        
+        .form-group button {
+            background-color: var(--cor-preco);
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 1.1em;
+            font-weight: bold;
+            transition: background-color 0.3s;
+            display: block;
+            width: 50%;
+            margin: 30px auto 0 auto;
+        }
+
+        .form-group button:hover {
+            background-color: var(--cor-caramelo);
+        }
+        
+        .info-contato {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid var(--cor-bege-claro);
+        }
+        
+        .info-contato p {
+            font-size: 1.1em;
+            margin: 5px 0;
+        }
+        
+        .info-contato a {
+            color: var(--cor-preco);
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        .info-contato a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Cantinho do Café</h1>
+        <nav>
+            <a href="index.html">Cardápio</a>
+            <a href="pedidos.html">Fazer Pedido</a>
+            <a href="contato.html">Feedback e Contato</a>
+            <a href="https://www.google.com/maps/search/Cantinho+do+Café+Arapongas" target="_blank">Localização (Arapongas)</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2>Sua Opinião Vale Ouro!</h2>
+        <p style="text-align: center; margin-bottom: 30px;">Use este formulário para enviar sugestões, elogios, reclamações ou tirar dúvidas.</p>
+        
+        <form action="#" method="POST">
+            
+            <div class="form-group">
+                <label for="assunto">Assunto Principal:</label>
+                <select id="assunto" name="assunto" required>
+                    <option value="">Selecione...</option>
+                    <option value="elogio">Elogio</option>
+                    <option value="sugestao">Sugestão de Produto/Melhoria</option>
+                    <option value="reclamacao">Reclamação/Problema</option>
+                    <option value="duvida">Dúvida</option>
+                    <option value="outros">Outros Assuntos</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="nome">Seu Nome (Opcional):</label>
+                <input type="text" id="nome" name="nome">
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Seu E-mail ou Telefone (Para resposta):</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="mensagem">Sua Mensagem / Feedback Detalhado:</label>
+                <textarea id="mensagem" name="mensagem" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <button type="submit">Enviar Feedback</button>
+            </div>
+        </form>
+        
+        <div class="info-contato">
+            <h3>Outras Formas de Contato</h3>
+            <p><strong>Telefone/WhatsApp:</strong> <a href="tel:+5543999999999">(43) 99999-9999</a></p>
+            <p><strong>E-mail Direto:</strong> <a href="mailto:contato@cantinhodocafe.com.br">contato@cantinhodocafe.com.br</a></p>
+        </div>
+        
+        <p style="font-size: 0.75em; color: var(--cor-texto); opacity: 0.7; text-align: center; margin-top: 20px;">* Este é um formulário demonstrativo. Em um site real, esta página precisaria de um sistema de backend ou integração com um serviço de e-mail para receber as mensagens.</p>
+    </div>
+</body>
+</html>

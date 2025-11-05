@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cantinho do Café - Cardápio</title>
+    <style>
+        /* ... (CSS anterior é mantido para consistência) ... */
+        :root {
+            --cor-cafe-escuro: #4A2C2A; 
+            --cor-bege-claro: #F5E5C9;
+            --cor-caramelo: #C89558; 
+            --cor-fundo: #FAFAEE; 
+            --cor-texto: #333333; 
+            --cor-preco: #D2691E; 
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--cor-fundo);
+            color: var(--cor-texto);
+        }
+
+        header {
+            background-color: var(--cor-cafe-escuro);
+            color: white;
+            padding: 25px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+            font-size: 3em;
+            letter-spacing: 2px;
+        }
+
+        nav {
+            margin-top: 15px;
+        }
+
+        nav a {
+            color: var(--cor-bege-claro);
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: bold;
+            font-size: 1.1em;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--cor-caramelo);
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: white;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        .menu-section {
+            margin-bottom: 30px;
+        }
+
+        .menu-section h2 {
+            border-bottom: 3px solid var(--cor-caramelo);
+            padding-bottom: 10px;
+            color: var(--cor-cafe-escuro);
+            font-size: 2em;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px dotted var(--cor-bege-claro);
+        }
+        
+        .menu-item:last-child {
+            border-bottom: none;
+        }
+
+        .item-info {
+            flex-grow: 1;
+        }
+
+        .item-info h3 {
+            margin: 0 0 4px 0;
+            color: var(--cor-texto);
+            font-size: 1.1em;
+            font-weight: bold;
+        }
+
+        .item-info p {
+            margin: 0;
+            font-size: 0.9em;
+            color: var(--cor-cafe-escuro);
+            opacity: 0.8;
+        }
+
+        .item-price {
+            font-weight: 900;
+            color: var(--cor-preco);
+            font-size: 1.15em;
+            margin-left: 20px;
+        }
+        
+        .btn-pedido {
+            display: block;
+            width: 80%;
+            max-width: 350px;
+            margin: 40px auto 20px auto;
+            padding: 18px;
+            text-align: center;
+            background-color: var(--cor-preco);
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2em;
+            border-radius: 50px;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .btn-pedido:hover {
+            background-color: var(--cor-caramelo);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Cantinho do Café</h1>
+        <nav>
+            <a href="index.html">Cardápio Delicioso</a>
+            <a href="pedidos.html">Faça Seu Pedido</a>
+            <a href="https://www.google.com/maps/search/Cantinho+do+Café+Arapongas" target="_blank">Localização</a>
+            <a href="Contato.html">Feedback e contato</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        
+        <div class="menu-section">
+            <h2>☕ Cafés & Expressos</h2>
+            
+            <div class="menu-item">
+                <div class="item-info">
+                    <h3>Café Expresso</h3>
+                    <p>Puro grão Arábica, torra média, tirado na hora.</p>
+                </div>
+                <span class="item-price">R$ 5,00</span>
+            </div>
+            
+            <div class="menu-item">
+                <div class="item-info">
+                    <h3>Latte Macchiato</h3>
+                    <p>Leite vaporizado, dose de expresso e espuma de leite.</p>
+                </div>
+                <span class="item-price">R$ 12,00</span>
+            </div>
+
+            <div class="menu-item">
+                <div class="item-info">
+                    <h3>Cappuccino Italiano</h3>
+                    <p>Expresso, leite, espuma e chocolate polvilhado.</p>
+                </div>
+                <span class="item-price">R$ 14,00</span>
+            </div>
+            
+            <div class="menu-item">
+                <div class="item-info">
+                    <h3>Mocha de Caramelo</h3>
+                    <p>Expresso, calda de caramelo, leite vaporizado e chantilly.</p>
+                </div>
+                <span class="item-price">R$ 16,00</span>
+            </div>
+            
+            <div class="menu-item">
+                <div class="item-info">
+                    <h3>Café Gelado (Iced Coffee)</h3>
+                    <p>Café forte resfriado, açúcar mascavo e cubos de gelo.</p>
+                </div>
+                <span class="item-price">R$ 13,00</span>
+            </div>
+        </div>
+
+        <div class="menu-section">
+            <h2> & Doces</h2>
+            
+            <div class="menu-item">
+                <div class="item-info">
+                    <h3>Pão de Queijo Recheado</h3>
+                    <p>Tradicional mineiro com recheio de requeijão cremoso.</p>
+                </div>
+                <span class="item-price">R$ 9,00</span>
+            </div>
+            
+            <div class="menu-item">
+                <div class="item-info">
+                    <h3>Croissant de Manteiga</h3>
+                    <p>Massa folhada e leve, assada até dourar.</p>
+                </div>
+                <span class="item-price">R$ 11,00</span>
+            </div>
+            
+            <div class="menu-item">
+                <div class="item-info">
+                    <h3>Bolo de Cenoura com Cobertura</h3>
+                    <p>Fatia generosa de bolo úmido com calda de chocolate.</p>
+                </div>
+                <span class="item-price">R$ 10,00</span>
+            </div>
+            
+            <div class="menu-item">
+                <div class="item-info">
+                    <h3>Torta de Limão</h3>
+                    <p>Base crocante, creme azedinho e merengue tostado.</p>
+                </div>
+                <span class="item-price">R$ 15,00</span>
+            </div>
+            
+            <div class="menu-item">
+                <div class="item-info">
+                    <h3>Waffle com Frutas e Mel</h3>
+                    <p>Waffle quentinho, morangos, bananas e fio de mel.</p>
+                </div>
+                <span class="item-price">R$ 18,00</span>
+            </div>
+        </div>
+
+        <div class="menu-section">
+            <h2>🍹 Bebidas Frias & Chás</h2>
+            
+            <div class="menu-item">
+                <div class="item-info">
+                    <h3>Smoothie de Morango e Banana</h3>
+                    <p>Frutas frescas batidas com iogurte natural.</p>
+                </div>
+                <span class="item-price">R$ 19,00</span>
+            </div>
+            
+            <div class="menu-item">
+                <div class="item-info">
+                    <h3>Chá Gelado de Pêssego</h3>
+                    <p>Chá preto infusionado com sabor de pêssego e gelo.</p>
+                </div>
+                <span class="item-price">R$ 11,00</span>
+            </div>
+            
+            <div class="menu-item">
+                <div class="item-info">
+                    <h3>Chocolate Quente Cremoso</h3>
+                    <p>Feito com chocolate belga e uma pitada de canela.</p>
+                </div>
+                <span class="item-price">R$ 15,00</span>
+            </div>
+            
+            <div class="menu-item">
+                <div class="item-info">
+                    <h3>Suco de Melancia</h3>
+                    <p>Melancia natural e refrescante (300ml).</p>
+                </div>
+                <span class="item-price">R$ 8,00</span>
+            </div>
+            
+            <div class="menu-item">
+                <div class="item-info">
+                    <h3>Água com Gás e Limão</h3>
+                    <p>Garrafa 500ml com fatia de limão taiti.</p>
+                </div>
+                <span class="item-price">R$ 6,00</span>
+            </div>
+        </div>
+        
+        <a href="pedidos.html" class="btn-pedido">Fazer Meu Pedido Agora</a>
+    </div>
+</body>
+</html>
+
